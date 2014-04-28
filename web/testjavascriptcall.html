@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>TestJavascriptCall</title>
+    <link rel="stylesheet" href="testjavascriptcall.css">
+  </head>
+ 
+
+
+ 
+  <body>
+    <h1>TestJavascriptCall</h1>
+       
+    <div id="testJavaScript_div">
+      <p id="testJavaScript_p" onclick="changetext(this)">Click me!</p>
+    </div>
+
+    <script type="application/dart" src="testjavascriptcall.dart"></script>
+    <script src="packages/browser/dart.js"></script>
+    
+      <script>
+  
+  function changetext(id)
+  {
+    var a = {"input":testJavaScript_p.innerHTML}
+    reverse( a);
+    testJavaScript_p.innerHTML = a['output'];
+  }
+  </script>
+  </body>
+</html>
